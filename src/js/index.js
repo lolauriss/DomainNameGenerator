@@ -11,20 +11,21 @@ window.onload = function() {
   let adj = ["great", "big"];
   let noun = ["jogger", "racoon"];
 
-  const nameGenerator = () => {
-    let nameDomain = [];
+  let newName = [];
 
-    for (let i in pronoun) {
-      for (let j in adj) {
-        for (let k in noun) {
-          nameDomain.push;
-        }
+  for (let i in pronoun) {
+    for (let j in adj) {
+      for (let x in noun) {
+        let newConcat = pronoun[i] + adj[j] + noun[x] + ".com \n";
+        newName.push(newConcat);
       }
     }
+  }
 
   let myList = "";
-  for (let i = 0; i < nameDomain.length; i++) {
-    myList += "<li>${nameDomain[i]}.com</li>";
+  for (let index in newName) {
+    myList += `<li>${newName[index]}.com</li>`;
   }
-  document.querySelector("#generator").innerHTML = "<ul>${myList}</ul>";
+
+  document.querySelector("#generator").innerHTML = `<ul>${myList}</ul>`;
 };
